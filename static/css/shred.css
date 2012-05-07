@@ -1,11 +1,11 @@
 body {
 	font-family: monospace, sans-serif;
 	margin: 0px;
+	font-size: 14px;
 }
 
 #user_code {
 	height: 300px;
-	background-color: #33FFCC !important;
 }
 
 #submit_button {
@@ -22,8 +22,8 @@ body {
 }
 
 #right {
-	padding-top: 50px;
-	margin-left: 50px;
+	padding-top: 20px0px;
+	margin-left: 20px;
 	vertical-align:top;
 	display:inline-block;
 }
