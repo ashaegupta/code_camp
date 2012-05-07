@@ -26,6 +26,7 @@ function load_code_mirror_blocks(pre_code_num_lines) {
 	    matchBrackets: true,
 	    readOnly: true,
 	  });
+	document.body.style.visibility='visible';
 }
 
 function show_message(message) {

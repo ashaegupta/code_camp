@@ -2,14 +2,15 @@
 <html>
     <head>
         <title>Unshred</title>
+        <script src="{{static_url('javascript/codemirror.js')}}"></script>
+        <script src="{{static_url('javascript/python.js')}}"></script>
+        <script src="{{static_url('javascript/code_camp.js')}}"></script>
         <link rel="stylesheet" type="text/css" href="{{static_url('css/shred.css')}}"/>
         <link rel="stylesheet" type="text/css" href="{{static_url('css/codemirror.css')}}"/>
     </head>
-    <body onload="load_code_mirror_blocks(pre_code_num_lines={{pre_code_num_lines}}); 
-                    show_message('{{message}}')";>
-                    <script src="{{static_url('javascript/codemirror.js')}}"></script>
-                    <script src="{{static_url('javascript/python.js')}}"></script>
-                    <script src="{{static_url('javascript/code_camp.js')}}"></script>
+    <body style="visibility: hidden;"
+          onload="load_code_mirror_blocks(pre_code_num_lines={{pre_code_num_lines}}); 
+                show_message('{{message}}')";>
         <div id="header">
             <div id="header_text">
                 Challenge 3: Unchop sushi
