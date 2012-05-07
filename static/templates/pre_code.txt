@@ -1,0 +1,36 @@
+""" Write the function reverse_list() to reverse a list.
+    i.e., If you have the list [3,2,1] return [1,2,3]
+    If you get it right, these fishes will be whole again!
+    Without further ado, let's get into the code.
+"""
+
+### Global variables, you can ignore these
+ORIGINAL_IMAGE_FILEPATH
+SHRED_WIDTH 
+IMAGE_HEIGHT
+EDITED_IMAGE_FILENAME
+
+# The current sequence of images shredded image.
+SEQUENCE
+
+### Methods provided
+def unreverse_image():
+    """Reverse a list and create a new image from the reversed list"""
+    ordered_list = reverse_list(SEQUENCE)
+    create_image_from_sequence(sequence=ordered_list)
+
+def create_image_from_sequence(sequence):
+    """Creates an image from a given sequence of shreds."""
+    image = Image.open(ORIGINAL_IMAGE_FILEPATH)
+    new_image = Image.new('RGBA', image.size)
+    
+    for i, shred_index in enumerate(sequence):
+        shred_x1, shred_y1 = SHRED_WIDTH * shred_index, 0
+        shred_x2, shred_y2 = shred_x1 + SHRED_WIDTH, HEIGHT
+        region = image.crop((shred_x1, shred_y1, shred_x2, shred_y2))
+        new_image.paste(region, (SHRED_WIDTH * i, 0))
+        
+    new_image.save(EDITED_IMAGE_FILENAME)
+    
+    
+### Your turn!

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unshred</title>
+        <link rel="stylesheet" type="text/css" href="{{static_url('css/shred.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{static_url('css/codemirror.css')}}"/>
+        <script src="{{static_url('javascript/codemirror.js')}}"></script>
+        <script src="{{static_url('javascript/python.js')}}"></script>
+        <script src="{{static_url('javascript/code_camp.js')}}"></script>
+    </head>
+    <body onload="load_code_mirror_blocks(pre_code_num_lines={{pre_code_num_lines}}); 
+                    show_message('{{message}}')";>
+        <div id="header">
+            <div id="header_text">
+                Challenge 3: Unchop sushi
+            </div>
+        </div>
+        <div id="content">
+            <div id="left">
+                <div id="code_div">
+                    <!-- text area 1. spaces above and below for clarity, not function -->
+                    <textarea id="pre_code" name="pre_code" disabled="disabled">{{pre_code_content}}</textarea>
+
+                    <!-- text area 2. -->
+                    <form name="user_input" action="" method="post" title="Give it a try:">
+                        <textarea id="user_code" name="user_code">{{user_code_starting_content}}</textarea>
+                        <input type="hidden" id="user_id" name="user_id" value='{{user_id}}'>
+                        <div id="submit_button_div">
+                            <input type="submit" id="submit_button" value="compile">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="right">
+                <div id="image">
+                    <img src='{{image}}'>
+                </div>            
+            </div>
+        </div>
+    </body>
+</html>

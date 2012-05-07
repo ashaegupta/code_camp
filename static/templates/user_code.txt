@@ -1,0 +1,6 @@
+def reverse_list(sequence):
+    """Reverse a given sequence and return the result"""
+    
+    # ---- Enter your code here. ----
+    
+    return sequence

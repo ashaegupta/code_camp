@@ -1,0 +1,2 @@
+class IndentError(Exception):
+    pass
