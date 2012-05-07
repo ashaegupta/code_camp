@@ -24,7 +24,7 @@
 
                     <!-- text area 2. -->
                     <form name="user_input" action="" method="post" title="Give it a try:">
-                        <textarea id="user_code" name="user_code">{{user_code_starting_content}}</textarea>
+                        <textarea id="user_code" name="user_code" background-color:"#00FFFF">{{user_code_starting_content}}</textarea>
                         <input type="hidden" id="user_id" name="user_id" value='{{user_id}}'>
                         <div id="submit_button_div">
                             <input type="submit" id="submit_button" value="compile">

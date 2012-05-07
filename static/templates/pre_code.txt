@@ -4,13 +4,13 @@
     Without further ado, let's get into the code.
 """
 
-### Global variables, you can ignore these
+### Global variables, you can ignore these for now
 ORIGINAL_IMAGE_FILEPATH
 SHRED_WIDTH 
 IMAGE_HEIGHT
 EDITED_IMAGE_FILENAME
 
-# The current sequence of images shredded image.
+# The reversed sequence that needs to be fixed.
 SEQUENCE
 
 ### Methods provided
@@ -20,7 +20,7 @@ def unreverse_image():
     create_image_from_sequence(sequence=ordered_list)
 
 def create_image_from_sequence(sequence):
-    """Creates an image from a given sequence of shreds."""
+    """Creates an image from a given number sequence."""
     image = Image.open(ORIGINAL_IMAGE_FILEPATH)
     new_image = Image.new('RGBA', image.size)
     
