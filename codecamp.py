@@ -132,7 +132,6 @@ class MainHandler(tornado.web.RequestHandler):
         lines_without_first_indent = []
         for line in lines:
             if line[0:4] != '    ':
-                print "indentation error"
                 raise IndentError('Indentation is important in python; make sure your lines are indented correctly.')
             else:
                 lines_without_first_indent.append(line[4:])
@@ -151,10 +150,8 @@ class MainHandler(tornado.web.RequestHandler):
                         message=''):
                         
         if message:
-            print "backslashing"
             message = message.replace("'", "\\'")
             message = message.replace('"', '\\"')
-            print message
         
         self.render(template,
                     pre_code_content=pre_code_content,
@@ -179,5 +176,5 @@ application = tornado.web.Application([
 if __name__ == "__main__":
     logging.getLogger().setLevel(logging.INFO)
     http_server = tornado.httpserver.HTTPServer(application)
-    http_server.listen(9001)
+    http_server.listen(80)
     tornado.ioloop.IOLoop.instance().start()
